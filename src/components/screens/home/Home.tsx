@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 
 const Home: FC = () => {
   return (
-    <Layout>
+    <Layout title='Home' description='Sale cars'>
       <main className={`${styles.main}`}>
         <div className={styles.description}>
           <p>

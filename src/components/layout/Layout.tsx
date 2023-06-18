@@ -2,6 +2,8 @@ import { FC, PropsWithChildren } from 'react';
 import Header from './header/Header';
 
 import { Titillium_Web } from 'next/font/google';
+import Meta from '../seo/Meta';
+import { IMeta } from '../seo/meta.interface';
 
 const titillium = Titillium_Web({
   weight: ['300', '400', '600', '700'],
@@ -10,15 +12,18 @@ const titillium = Titillium_Web({
   variable: '--titillium',
 });
 
-const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
+const Layout: FC<PropsWithChildren<IMeta>> = ({
+  children,
+  title,
+  description,
+}) => {
   return (
-    <div
-      className={titillium.variable}
-      style={{ fontFamily: 'var(--titillium)' }}
-    >
-      <Header />
-      <main>{children}</main>
-    </div>
+    <Meta title={title} description={description}>
+      <div className={titillium.className}>
+        <Header />
+        <main>{children}</main>
+      </div>
+    </Meta>
   );
 };
 
