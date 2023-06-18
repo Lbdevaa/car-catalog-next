@@ -1,16 +1,12 @@
 import { FC } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
-import styles from './Home.module.css';
-import { Inter } from 'next/font/google';
-import { useRouter } from 'next/router';
+import styles from './Home.module.scss';
 import Layout from '@/components/layout/Layout';
-const inter = Inter({ subsets: ['latin'] });
 
 const Home: FC = () => {
   return (
     <Layout>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main className={`${styles.main}`}>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
