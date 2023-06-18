@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header a{
+    color: #fff;
+    margin: 0 10px;
+    transition: color .4s ease-in-out;
+    padding: 10px;
+}
+
+.header a:hover , .header .active{
+    color: #c353c3;
+}
