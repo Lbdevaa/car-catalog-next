@@ -23,7 +23,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
         id: car.id.toString(),
       },
     })),
-    fallback: 'blocking',
+    fallback: 'blocking', // если страницы не существует, сделает запрос на сервер и проверит ее существование
   };
 };
 
